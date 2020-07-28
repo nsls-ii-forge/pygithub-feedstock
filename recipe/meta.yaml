@@ -1,0 +1,43 @@
+{% set name = "PyGithub" %}
+{% set version = "1.51" %}
+{% set sha256 = "d2d17d1e3f4474e070353f201164685a95b5a92f5ee0897442504e399c7bc249" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  build:
+    - python
+    - pip
+
+  run:
+    - python >=3
+    - pyjwt
+    - requests >=2.14.0
+    - deprecated
+
+test:
+  requires:
+    - pip
+  imports:
+    - github
+  commands:
+    - pip check
+
+about:
+  home: http://pygithub.github.io/PyGithub
+  license_file: COPYING.LESSER
+  license: LGPL-3.0-only
+  license_family: LGPL
+  summary: Python library implementing the GitHub API v3
