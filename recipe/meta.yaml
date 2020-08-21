@@ -1,6 +1,6 @@
 {% set name = "PyGithub" %}
-{% set version = "1.52" %}
-{% set sha256 = "fc11a182ca3d88dde6ab2fbbd07e3441685cc8b738f7813fcbfc18be28c1d8ed" %}
+{% set version = "1.53" %}
+{% set sha256 = "776befaddab9d8fddd525d52a6ca1ac228cf62b5b1e271836d766f4925e1452e" %}
 
 package:
   name: {{ name|lower }}
