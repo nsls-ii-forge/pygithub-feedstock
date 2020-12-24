@@ -1,6 +1,6 @@
 {% set name = "PyGithub" %}
-{% set version = "1.53" %}
-{% set sha256 = "776befaddab9d8fddd525d52a6ca1ac228cf62b5b1e271836d766f4925e1452e" %}
+{% set version = "1.54" %}
+{% set sha256 = "14c96d55e3c0e295598e52fbbbf2a7862a293723482ae9000cb9c816faab4fb4" %}
 
 package:
   name: {{ name|lower }}
@@ -20,12 +20,12 @@ requirements:
   build:
     - python
     - pip
-
   run:
     - python >=3
-    - pyjwt
-    - requests >=2.14.0
+    - cryptography >=3.2
     - deprecated
+    - pyjwt
+    - requests >=2.14.0,<2.25
 
 test:
   requires:
