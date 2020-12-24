@@ -22,9 +22,10 @@ requirements:
     - pip
   run:
     - python >=3
+    - cryptography >=3.2
+    - deprecated
     - pyjwt
     - requests >=2.14.0,<2.25
-    - deprecated
 
 test:
   requires:
