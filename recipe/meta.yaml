@@ -20,11 +20,10 @@ requirements:
   build:
     - python
     - pip
-
   run:
     - python >=3
     - pyjwt
-    - requests >=2.14.0
+    - requests >=2.14.0,<2.25
     - deprecated
 
 test:
