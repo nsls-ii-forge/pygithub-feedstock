@@ -24,7 +24,7 @@ requirements:
     - python >=3
     - cryptography >=3.2
     - deprecated
-    - pyjwt
+    - pyjwt >=2
     - pynasl
     - requests >=2.14.0,<2.25
 
