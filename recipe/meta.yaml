@@ -24,7 +24,7 @@ requirements:
     - deprecated
     - pyjwt >=2
     - pynacl >=1.4
-    - requests >=2.14.0,<2.25
+    - requests >=2.14.0
 
 test:
   requires:
